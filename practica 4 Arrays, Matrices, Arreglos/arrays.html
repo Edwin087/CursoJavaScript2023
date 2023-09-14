@@ -26,10 +26,55 @@
       <div class="principal">
         <h1>Manejando Arrays</h1>
 
+
         <script>
 
           document.write("<p>  el  articulo es <strong> " + articulos[0] + "</strong></p>");
-          alert("hay " + articulos.length + " articulos");
+
+          //alert("hay " + articulos.length + " articulos");
+
+          //con está instrucción accedes al ultimo elemento del array [articulos.length - 1] 
+          document.write("<p>El ultimo elemento es <strong>  " + articulos[articulos.length - 1] + "  </strong> </p> ");
+          // agragar un elemeto al comienzo del array con unshift
+          articulos.unshift("balón");
+          document.write("<p> Agregamos este elemento: <strong>" + articulos[0] + " </strong>  <p>");
+
+          // agragar un elemeto al  final del  array con  push
+          articulos.push(prompt("intoduce un articulo"));
+          document.write("<p> Agregamos este elemento al final: <strong>" + articulos[articulos.length - 1] + " </strong>  <p>");
+
+          document.write("<p>" + articulos[0] + "<br/>");
+          document.write(articulos[1] + "<br/>");
+          document.write(articulos[2] + "<br/>");
+          document.write(articulos[3] + "<br>"); document.write(articulos[4] + "<br/>");
+          document.write(articulos[5] + "<br/> </p>");
+
+          alert("Borraremos el primer elemento");
+          // para borrar un elemento al inicio del array con shift 
+          articulos.shift();
+          document.write("<p>" + articulos[0] + "<br/>");
+          document.write(articulos[1] + "<br/>");
+          document.write(articulos[2] + "<br/>");
+          document.write(articulos[3] + "<br>");
+          document.write(articulos[4] + "<br/> </p>");
+
+          alert("Borraremos el ultimo elemto");
+          // para borrar un elemento al final del array con pop
+          articulos.pop();
+          document.write("<p>" + articulos[0] + "<br/>");
+          document.write(articulos[1] + "<br/>");
+          document.write(articulos[2] + "<br/>");
+          document.write(articulos[3] + "<br/> </p>");
+
+
+
+
+
+
+
+
+
+
 
 
         </script>
