@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <script>
+
+        /*let precioCoche = 60000;
+        let dineroAhorrado = prompt("Introduce cuanto tienes ahorrado");
+        let loteria = prompt("te a tocado la loteria");
+        //operador ||= O
+        if (dineroAhorrado >= precioCoche || loteria == "si") {
+            alert("lo puedes comprar");
+
+        } else {
+            alert("No lo puedes comprar");
+            //document.write("no lo puedes comprar");
+        }
+        alert("ANIMO.. LO VAS A LOGRAR");*/
+
+
+
+        /*
+        let precioCoche = 60000;
+        let dineroAhorrado = prompt("Introduce cuanto tienes ahorrado");let edad = prompt("introduce tu edad por favor");
+        let licencia = prompt("tienes liecncia");
+        //  operador && = Y
+        if (dineroAhorrado >= precioCoche && edad >= 18 && licencia == "si") {
+            alert("lo puedes comprar");
+
+        } else {
+            alert("No lo puedes comprar");
+            //document.write("no lo puedes comprar");
+        }*/
+
+
+    </script>
+    <style>
+        table {
+            margin: auto;
+        }
+    </style>
+
+</head>
+
+<body id="cuerpo">
+    <form name="form1" method="post" action="" id="miformumlario">
+        <table width="25%" border="1" id="mitabla">
+            <tr>
+                <td>Nombre:</td>
+                <td><label for="textfield"></label>
+                    <input type="text" name="textfield" id="textfield">
+                </td>
+            </tr>
+            <tr>
+                <td>Apellidos:</td>
+                <td><input type="text" name="textfield2" id="textfield2"></td>
+            </tr>
+            <tr>
+                <td>Edad:</td>
+                <td><input type="text" name="textfield3" id="textfield3"></td>
+            </tr>
+            <tr>
+                <td>Carnet:</td>
+                <td><input type="text" name="textfield4" id="textfield4"></td>
+            </tr>
+            <tr>
+                <td> <input type="submit" name="boton" id="boton" value="ENVIAR"></td>
+                <td> <input type="reset" name="booton2" id="boton2" value="RESTABLECER"></td>
+            </tr>
+        </table>
+    </form>
+
+    <script>
+        //toLowerCase() es para minuscula en un string
+        //toUpperCase() es para mayusculas en un strin
+
+        let cuerpo = document.getElementById("cuerpo");
+        let colorWeb = prompt("Introduce el color de fondo. Azur/Rojo/Verde").toLowerCase();
+        if (colorWeb != "azul" && colorWeb != "rojo" && colorWeb != "verde") {
+            alert("El color no esta contemplado");
+        } else if (colorWeb == "rojo") {
+            cuerpo.style.backgroundColor = "red";
+        } else if (colorWeb == "azul") {
+            cuerpo.style.backgroundColor = "blue";
+        } else {
+            cuerpo.style.backgroundColor = "green";
+        }
+
+
+
+
+
+        //forma normal de construir un if
+
+        /* if (colorWeb == "azul") {
+             cuerpo.style.backgroundColor = "blue";
+         }
+         else if (colorWeb == "rojo") {
+             cuerpo.style.backgroundColor = "red";
+ 
+         } else if (colorWeb == "verde") {
+             cuerpo.style.backgroundColor = "green";
+ 
+         } else {
+             alert("el color no esta contemplado");
+         }*/
+
+
+    </script>
+
+</body>
+
+</html>
