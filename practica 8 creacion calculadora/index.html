@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        let num1 = prompt("Introduce el primer numero");
+        let num2 = prompt("introdcuce el segundo numero");
+        //isNaN es para ver si no es un numero y al poner ! decimos lo contrario que !isNaN es para ver que si sea un numero
+        if (!isNaN(num1) && !isNaN(num2)) {
+
+            let operaccion = prompt("Que operación deceas realizar? +,-,*,/");
+
+            if (operaccion == "+") {
+                alert("la suma es " + parseInt(num1) + parseInt(num2));
+
+            } else if (operaccion == "-") {
+                alert(parseInt(num1) - parseInt(num2));
+
+            } else if (operaccion == "*") {
+                alert(parseInt(num1) * parseInt(num2));
+
+            } else if (operaccion == "/") {
+                alert(parseInt(num1) / parseInt(num2));
+
+            } else {
+                alert("La operacion es incorrecta");
+            }
+
+        } else {
+            //typeof para ver de que tipo de dato a introducido el usuario en nun1 y num2
+            if (typeof (num1) == "string" || typeof (num2) == "string") {
+                alert("no has introducido valores numéricos");
+            } else {
+                alert("error no identificado");
+            }
+
+        }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
