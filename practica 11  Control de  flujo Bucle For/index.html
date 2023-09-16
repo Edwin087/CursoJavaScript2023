@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <Script>
+        /* for (let i = 0; i < 10; i++) {
+             // alert("hola");
+             document.write("hola " + i + "<br>");
+ 
+         }*/
+
+        /*let meses = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"];
+
+        for (let i = 0; i < meses.length; i++) {
+
+            document.write(meses[i] + "<br>");
+        }*/
+
+        let trabajadores = new Array();
+        let persona = "";
+        let contador = 0;
+        while (persona != "salir") {
+            persona = prompt(" Introduce trabajador");
+            trabajadores[contador] = persona;
+            contador++
+
+        }
+        trabajadores.pop();
+
+        for (let i = 0; i < trabajadores.length; i++) {
+            document.write(trabajadores[i] + " <br>");
+
+
+        }
+
+
+
+
+    </Script>
+</head>
+
+<body>
+
+</body>
+
+</html>
