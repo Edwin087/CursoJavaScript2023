@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+
+<body>
+
+
+
+    <table border="0" with="25%">
+        <td>
+            <label for="textfield"></label><input type="text" name="textfield" id="cmensaje">
+        </td>
+        <td>
+            <label for="textfield"></label><input type="text" name="textfield2" id="cintentos">
+        </td>
+
+    </table>
+
+    <script>
+
+        let aleatorio = Math.round(Math.random() * 100);
+        let minumero, intentos;
+        minumero = 0;
+        intentos = 0;
+        let mensaje = document.getElementById("cmensaje");
+        let intentos_consumidos = document.getElementById("cintentos");
+
+
+        do {
+            minumero = prompt("introduce un numero entre 0-100");
+
+            if (aleatorio > minumero) {
+                //alert("Mas alto");
+                //document.write("Mas alto" + "<br>");
+                //value hace referencia al valor que hay y en un cuadro de texto
+                mensaje.value = "Mas alto";
+                mensaje.style.fontSize = "18px";
+
+
+            } else if (aleatorio < minumero) {
+                // alert("más bajo");
+                // document.write("Mas bajo" + "<br>");
+                mensaje.value = "mas bajo";
+                mensaje.style.fontSize = "18px";
+
+            }
+            intentos++;
+            intentos_consumidos.value = intentos;
+            intentos_consumidos.style.fontSize = "18px";
+            intentos_consumidos.style.color = "red";
+            intentos_consumidos.style.textAlign = "center";
+
+        } while (aleatorio != minumero);
+        // alert("correcto. Has consumido " + intentos + " intentos");
+
+        mensaje.value = "Correcto";
+        mensaje.style.color = "blue";
+
+    </script>
+</body>
+
+</html>
