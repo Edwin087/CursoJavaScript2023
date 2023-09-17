@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var repetir = "si";
+
+        function suma(num1, num2) {
+            alert("la suma es: " + (num1 + num2))
+
+        }
+        function resta(num1, num2) {
+            alert("la resta es: " + (num1 - num2))
+
+        }
+        function multiplicacion(num1, num2) {
+            alert("la multiplicacón  es: " + (num1 * num2))
+
+        }
+
+        function divicion(num1, num2) {
+            alert("la divición es: " + (num1 / num2));
+
+        }
+        let operacion = prompt("Que operación deceas realizar").toLowerCase();
+        let operacion1 = parseInt(prompt("Introduce el primer numero"));
+        let operacion2 = parseInt(prompt("Introdcuce el segundo numero"));
+        do {
+            if (operacion == "sumar") {
+                suma(operacion1, operacion2);
+
+            }
+            else if (operacion == "resta") {
+                resta(operacion1, operacion2);
+
+            }
+            else if (operacion == "multiplicación") {
+                multiplicacion(operacion1, operacion2);
+            }
+
+            else if (operacion == "dividir") {
+                divicion(operacion1, operacion2);
+            }
+            else {
+                alert("operación no contemplada");
+            }
+
+            repetir = prompt("Deseas repetir");
+
+        } while (repetir == "si");
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
