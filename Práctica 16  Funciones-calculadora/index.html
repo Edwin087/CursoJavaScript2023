@@ -5,6 +5,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        .numero {
+            width: 60px;
+            height: 60px;
+        }
+
+        .igual {
+            width: 120px;
+            height: 60px;
+        }
+
+        table {
+            margin: auto;
+        }
+
+        .color_display {
+            height: 30px;
+            background-color: gray;
+            border: medium #fff;
+            font-size: 18px;
+            text-align: right;
+            padding: 5px;
+
+        }
+    </style>
+    <script>
+        function displaynumeros() {
+            document.getElementById("display").value = 1;
+
+        }
+
+
+    </script>
+
 </head>
 
 <body>
@@ -12,7 +47,7 @@
 
         <tr>
             <td colspan="4" align="center">
-                <input type="text" name="display" class="color_display" size="25">
+                <input type="text" name="display" class="color_display" size="25" id="display">
             </td>
         </tr>
 
@@ -39,7 +74,7 @@
         </tr>
 
         <tr>
-            <td> <input name="num1" type="button" class="numero" id="num1" value="1"></td>
+            <td> <input name="num1" type="button" class="numero" id="num1" value="1" onclick="displaynumeros()"></td>
             <td><input name="num2" type="button" class="numero" id="num2" value="2"></td>
             <td><input name="num3" type="button" class="numero" id="num3" value="3"></td>
         </tr>
@@ -48,13 +83,9 @@
         <tr>
             <td> <input name="num0" type="button" class="numero" id="num0" value="0"></td>
             <td><input name="button17" type="button" class="numero" id="button17" value=","></td>
-            <td><input name="num3" type="button" class="numero" id="num3" value="3"></td>
+            <td colspan="2"><input name="button12" type="button" class="igual" id="button12" value="="></td>
 
         </tr>
-
-
-
-
 
     </table>
 </body>
