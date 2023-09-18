@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- loops automaticos  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- forma simplificada con jquery -->
+    <script>
+
+        $(document).ready(function () {
+
+            $("#carrete img").hide();
+
+        });
+
+    </script>
+
+
+</head>
+
+<body>
+    <div id="carrete">
+        <img src="img/1.webp" width="250" height="175">
+        &nbsp;
+        <img src="img/2.webp" width="250" height="175">
+        &nbsp;
+        <img src="img/3.webp" width="250" height="175">
+        &nbsp;
+        <img src="img/4.webp" width="250" height="175">
+    </div>
+
+    <!-- forma tradiciónal
+        <script>
+        let imagenes = document.querySelectorAll("#carrete img");
+        for (let i = 0; i < imagenes.length; i++) {
+            imagenes[i].style.visibility = "hidden";
+
+        }
+
+    </script> -->
+
+</body>
+
+</html>
