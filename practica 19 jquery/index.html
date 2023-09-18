@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <style>
+        #anuncio {
+            background-color: #000;
+            color: #fff;
+            font-size: 24px;
+        }
+    </style>
+    <!-- funciones encadenadas o chained functions -->
+
+    <script>
+        $(document).ready(function () {
+            $("#anuncio").width(500)
+                .height(500)
+                .text("Vende!")
+                .hide()
+                .fadeIn(10000);
+
+        });
+
+    </script>
+</head>
+
+<body>
+    <div id="anuncio">
+        Compra!
+    </div>
+    <!-- forma normal  -->
+    <!-- <script>
+        let anuncio = document.getElementById("anuncio");
+        anuncio.style.width = "500px";
+        anuncio.style.height = "500px";
+        anuncio.innerHTML = "Vende";
+
+    </script> -->
+
+</body>
+
+</html>
