@@ -25,7 +25,10 @@
             height: 200px;
         }
 
-        #sustitucion {
+        #imagen1,
+        #imagen2,
+        #imagen3,
+        #imagen4 {
             float: left;
             margin: 15px;
             width: 350px;
@@ -42,10 +45,16 @@
              z.addEventListener("click", cerrarBaner, false);*/
 
             //simplificando con las funciones encadenadas de jQuery, hacer el codigo mas corto de la siguiente manera 
+
             document.getElementById("cerrar").addEventListener("click", cerrarBaner, false);
-            document.getElementById("imagen1").addEventListener("click", carrito, false);
 
 
+            //forma simplificada el codigo
+            let imagenes = document.querySelectorAll("#carrete img");
+            for (let i = 0; imagenes.length; i++) {
+                imagenes[i].addEventListener("click", carrito, false);
+
+            }
 
         });
         //funcion para eliminta con  .remove()
@@ -54,8 +63,20 @@
             $("#banner").remove();
 
         }
-        function carrito() {
-            $("#imagen1").replaceWith("<div id='sustitucion'>agregado al carro</div>");
+        function carrito(num) {
+            // con esta funcion replaceWith() que remplaza contenido... con target es para ver quien a desencadenado el evento al hace click 
+            if (num.target == imagen1) {
+                $("#imagen1").replaceWith("<div id='imagen1'>agregado al carro</div>");
+            }
+            else if (num.target == imagen2) {
+                $("#imagen2").replaceWith("<div id='imagen2'>agregado al carro</div>");
+            }
+            else if (num.target == imagen3) {
+                $("#imagen3").replaceWith("<div id='imagen3'>agregado al carro</div>");
+            }
+            else if (num.target == imagen4) {
+                $("#imagen4").replaceWith("<div id='imagen4'>agregado al carro</div>");
+            }
         }
 
     </script>
