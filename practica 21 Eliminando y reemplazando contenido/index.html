@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #banner {
+            background-color: #f00;
+            width: 450px;
+            height: 300px;
+            position: absolute;
+            left: 400px;
+            top: 50px;
+            font-size: 36px;
+            text-align: center;
+
+        }
+
+        img {
+            float: left;
+            margin: 15px;
+            width: 350px;
+            height: 200px;
+        }
+
+        #sustitucion {
+            float: left;
+            margin: 15px;
+            width: 350px;
+            height: 200px;
+            font-size: 36px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            /* forma normal
+             let z = document.getElementById("cerrar");
+             z.addEventListener("click", cerrarBaner, false);*/
+
+            //simplificando con las funciones encadenadas de jQuery, hacer el codigo mas corto de la siguiente manera 
+            document.getElementById("cerrar").addEventListener("click", cerrarBaner, false);
+            document.getElementById("imagen1").addEventListener("click", carrito, false);
+
+
+
+        });
+        //funcion para eliminta con  .remove()
+
+        function cerrarBaner() {
+            $("#banner").remove();
+
+        }
+        function carrito() {
+            $("#imagen1").replaceWith("<div id='sustitucion'>agregado al carro</div>");
+        }
+
+    </script>
+</head>
+
+<body>
+    <div id="banner">
+        banner de prueba
+        <p id="cerrar">Cerrar</p>
+    </div>
+
+    <div id="carrete">
+
+
+        <img src="img/1.webp" id="imagen1">
+        <img src="img/2.webp" id="imagen2">
+        <img src="img/3.webp" id="imagen3">
+        <img src="img/4.webp" id="imagen4">
+
+    </div>
+
+
+</body>
+
+</html>
