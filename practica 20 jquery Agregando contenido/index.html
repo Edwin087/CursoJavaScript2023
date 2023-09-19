@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <style>
+        .micontenedor {
+            background-color: green;
+        }
+    </style>
+
+
+
+    <script>
+
+
+        $(document).ready(function () {
+            /*  la funcion.html() que SUSTITUYE  nombres de la pagína
+          de este modo remplasamos un texto en la pagina en este caso al contenedor div con id="errores" que este contiene a un h2
+            $("#errores").html("<p> Hay errores en el formulario</p>");*/
+
+            /*de esta manera podemos  agregar un texto a continuacion de la etiqueta pero dentro del mismo contenedor  señalada con la funcion .append()
+            $("#errores").append("<p> Hay errores en el formulario</p>")*/
+
+            /* de esta manera podemos  agregar un texto pero antes  de la etiqueta señalada pero dentro del mismo contenedor con la funcion .prepend()
+            $("#errores").prepend("<p> Hay errores en el formulario</p>");*/
+
+
+            /* de esta manera podemos  agregar un texto fuera del contenedor pero antes de la etiqueta con la funcion .before()
+            $("#errores").before("<p> Hay errores en el formulario</p>");*/
+
+            /* de esta manera podemos  agregar un texto fuera del contenedor pero despus de la etiqueta con la funcion .after()
+            $("#errores").after("<p> Hay errores en el formulario</p>");*/
+
+            /* para cambiar el nombre señalando la etiqueta
+            $("#errores h2").text("Hay errores en el formulario");*/
+
+        });
+    </script>
+
+
+    <script>
+
+        function validar() {
+            let nUsuario = document.getElementById("usuario").value;
+            if (nUsuario == "") {
+                $("#usuario").after("rellena este campo, por favor");
+
+            }
+
+
+        }
+
+
+
+    </script>
+
+</head>
+
+<body>
+
+    <form action="">
+        <input type="text" name="" id="usuario"> <br>
+        <input type="text" name="" id="nombre"><br>
+        <input type="text" name="" id="apellido"><br>
+        <input type="button" value="click" onclick="validar()">
+
+    </form>
+
+
+
+
+
+
+
+
+    <!--para el ejemplo de arriaba... <div id="contenedor">
+        <div id="errores" class="micontenedor">
+            <h2>Errores</h2>
+        </div>
+
+    </div> -->
+</body>
+
+</html>
