@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .linkdestacacursos {
+            /* background-color: #f00; */
+            color: red;
+            font-weight: bolder;
+            margin-left: 25px;
+
+        }
+
+        a {
+            display: block;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        table {
+            text-align: center;
+            border: none;
+
+        }
+
+        td {
+            border: none;
+        }
+
+        #contieneEnlaces {
+            position: absolute;
+            left: 31px;
+            top: 65px;
+            width: 400px;
+            height: 649px;
+            z-index: 1;
+            padding-top: 100px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            //.addClass() sirve para hace que sean destacados 
+            /*$("a [href^='https://']").addClass("linkdestacacursos");*/
+            document.getElementById("cursos").addEventListener("click", resaltacursos, false);
+            document.getElementById("informacion").addEventListener("click", resaltaejemplos, false);
+
+        });
+        function resaltacursos() {
+            //removeClass() limpias lo agregado con addClass
+            // $(".ejemplos").removeClass("linkdestacacursos");
+            // $(".cursos").addClass("linkdestacacursos");
+
+            //toggleClass tranaja a modo on/of que es lo mismo remplaza a  addClass() y removeClass() se puede trabajar con checkbox
+            $(".cursos").toggleClass("linkdestacacursos")
+        }
+        function resaltaejemplos() {
+
+            // $(".cursos").removeClass("linkdestacacursos");
+            // $(".ejemplos").addClass("linkdestacacursos");
+            $(".ejemplos").toggleClass("linkdestacacursos")
+
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <div id="contieneEnlaces">
+        <a href="https://www.pildorasinformaticas.es/" target="_blank" class="cursos">Pildoras informaticas</a><br>
+        <a href="https://www.google.com.ec/" target="_blank">google</a><br>
+        <a href="https://www.youtube.com/" target="_blank" class="cursos">youtube</a><br>
+        <a href="remover-remplazar.html" target="_blank" class="ejemplos">remover_remplazar</a><br>
+        <a href="https://news.google.com/home?hl=es-419&gl=US&ceid=US:es-419" target="_blank">Noticiaas y
+            negocios</a><br>
+        <a href="calculadora_arcaica" target="_blank" class="ejemplos">Calculadora</a>
+
+    </div>
+    <table width="100%" border="1">
+        <tr>
+            <td>
+                cursos destacados&nbsp;&nbsp;<input type="checkbox" value="cursos" id="cursos">
+            </td>
+            <td>Información adicional&nbsp; &nbsp; <input type="checkbox" value="Información" id="informacion"></td>
+        </tr>
+
+    </table>
+
+
+</body>
+
+</html>
