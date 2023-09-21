@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+
+        $(document).ready(function () {
+            document.getElementById("img1").addEventListener("mouseover", cambiar, false);
+            document.getElementById("img1").addEventListener("mouseout", restaurar, false);
+
+        });
+        function cambiar() {
+            // attr()modifica atributos html 
+            $("img").attr("src", "img/3.webp");
+        }
+
+        // attr()modifica atributos html 
+        function restaurar() {
+            $("img").attr("src", "img/2.webp");
+        }
+
+    </script>
+
+
+</head>
+
+<body>
+    <img src="img/2.webp" id="img1">
+</body>
+
+</html>
