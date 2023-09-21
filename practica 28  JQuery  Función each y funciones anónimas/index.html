@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        img {
+            margin: 0 20px;
+            width: 20%;
+
+        }
+
+        #contenedor {
+            width: 75%;
+            margin: auto;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            document.getElementById("boton").addEventListener("click", cambiar, false);
+
+        });
+
+        function cambiar() {
+
+            /*funciones encadenadas
+            $("img").fadeOut(1000).fadeIn(1000).width("310");*/
+
+            //funcion each()
+            $("img").each(function () {
+                $(this).fadeOut(1000).fadeIn(1000).width("310");
+
+            });
+        }
+
+    </script>
+
+
+
+</head>
+
+<body>
+    <div id="contenedor">
+        <img src="img/1.webp">
+        <img src="img/2.webp">
+        <img src="img/3.webp">
+        <img src="img/4.webp">
+    </div>
+    <div id="boton">
+        <input type="button" id="miboton" value="Acción">
+    </div>
+</body>
+
+</html>
