@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* #primerParrafo {
+            background-color: #f00
+
+        } */
+
+
+        h1 {
+            text-align: center;
+        }
+
+        div {
+            width: 16%;
+            margin: 0 100px;
+            float: left;
+            border: solid #f00 2px;
+            padding: 10px;
+
+        }
+
+        table {
+            width: 100%;
+            margin-top: 10px;
+
+        }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+
+        $(document).ready(function () {
+
+            /*ejemplos de prueca con .css()
+            
+            $("#primerParrafo").css("background-color", "#00f");
+            $(".destacado ").css("border", "2px dotted blue")*/
+
+
+
+            let botones = document.querySelectorAll("input");
+
+            for (let i = 0; botones.length; i++) {
+                botones[i].addEventListener("click", aumentar, false);
+                botones[i].addEventListener("click", disminuir, false);
+
+            }
+
+            /*document.getElementById("aumenta1").addEventListener("click", aumentar, false);
+            document.getElementById("disminuye1").addEventListener("click", disminuir, false);
+
+            document.getElementById("aumenta2").addEventListener("click", aumentar, false);
+            document.getElementById("disminuye2").addEventListener("click", disminuir, false);
+
+            document.getElementById("aumenta3").addEventListener("click", aumentar, false);
+            document.getElementById("disminuye3").addEventListener("click", disminuir, false);*/
+
+
+        });
+
+        function aumentar(e) {
+            let zonaActuacion;
+            if (e.target == aumenta1) {
+                zonaActuacion = "#noticias1";
+            }
+            else if (e.target == aumenta2) {
+                zonaActuacion = "#noticias2";
+
+            }
+            else if (e.target == aumenta3) {
+                zonaActuacion = "#noticias3";
+
+            }
+
+            // la define 
+            let tamdefecto = $(zonaActuacion).css("font-size");
+            // alert(tamdefecto);
+            //le modifica con .css
+            tamdefecto = parseInt(tamdefecto);
+            $(zonaActuacion).css("font-size", tamdefecto * 1.1)
+
+        }
+        function disminuir(e) {
+            let zonaActuacion;
+            if (e.target == disminuye1) {
+                zonaActuacion = "#noticias1";
+            }
+            else if (e.target == disminuye2) {
+                zonaActuacion = "#noticias2";
+
+            }
+            else if (e.target == disminuye3) {
+                zonaActuacion = "#noticias3";
+
+            }
+
+            let tamdefecto = $(zonaActuacion).css("font-size");
+            tamdefecto = parseInt(tamdefecto);
+            $(zonaActuacion).css("font-size", tamdefecto * 0.99)
+
+        }
+
+    </script>
+
+
+</head>
+
+<body>
+    <h1>NOTICIAS</h1>
+    <div id="noticias1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque alias repellat porro laborum
+        soluta praesentium id magni voluptatibus quisquam ut, deleniti necessitatibus impedit nobis expedita vel
+        assumenda quo officiis obcaecati?Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptatum
+        impedit cum. Suscipit ullam doloremque quod minus voluptates error dignissimos quasi. Repellendus dolore
+        inventore mollitia molestias modi incidunt fugit similique?
+
+        <table>
+            <tr>
+                <td style="text-align: left;"> <input type="button" value="aumentar" id="aumenta1"></td>
+                <td style="text-align: right;"><input type="button" value="disminuir" id="disminuye1"></td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="noticias2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque alias repellat porro laborum
+        soluta praesentium id magni voluptatibus quisquam ut, deleniti necessitatibus impedit nobis expedita vel
+        assumenda quo officiis obcaecati?Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptatum
+        impedit cum. Suscipit ullam doloremque quod minus voluptates error dignissimos quasi. Repellendus dolore
+        inventore mollitia molestias modi incidunt fugit similique?
+
+        <table>
+            <tr>
+                <td style="text-align: left;"> <input type="button" value="aumentar" id="aumenta2"></td>
+                <td style="text-align: right;"><input type="button" value="disminuir" id="disminuye2"></td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="noticias3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque alias repellat porro laborum
+        soluta praesentium id magni voluptatibus quisquam ut, deleniti necessitatibus impedit nobis expedita vel
+        assumenda quo officiis obcaecati?Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptatum
+        impedit cum. Suscipit ullam doloremque quod minus voluptates error dignissimos quasi. Repellendus dolore
+        inventore mollitia molestias modi incidunt fugit similique?
+
+        <table>
+            <tr>
+                <td style="text-align: left;"> <input type="button" value="aumentar" id="aumenta3"></td>
+                <td style="text-align: right;"><input type="button" value="disminuir" id="disminuye3"></td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+
+</html>
