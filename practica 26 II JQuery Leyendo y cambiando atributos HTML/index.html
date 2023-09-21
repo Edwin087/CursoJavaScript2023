@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        table {
+            text-align: center;
+            width: 50%;
+            border: none;
+            margin: auto;
+        }
+
+        img {
+            padding: 0 5px;
+            width: 250px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            let elementos = document.querySelectorAll("img");
+            for (let i = 0; i < elementos.length; i++) {
+                elementos[i].addEventListener("mouseover", cambiar, false);
+                elementos[i].addEventListener("mouseout", restaurar, false);
+            }
+
+        });
+        function cambiar(e) {
+
+            if (e.target == img1) {
+                $("#img1").attr("src", "img/imgs/1.jpg");
+            }
+            else if (e.target == img2) {
+                $("#img2").attr("src", "img/imgs/2.jpg");
+
+            }
+            else if (e.target == img3) {
+                $("#img3").attr("src", "img/imgs/3.jpg");
+
+            }
+            else if (e.target == img4) {
+                $("#img4").attr("src", "img/imgs/4.jpg");
+
+            }
+
+
+        }
+        function restaurar(e) {
+            if (e.target == img1) {
+                $("#img1").attr("src", "img/1.webp");
+            }
+            else if (e.target == img2) {
+                $("#img2").attr("src", "img/2.webp");
+
+            }
+            else if (e.target == img3) {
+                $("#img3").attr("src", "img/3.webp");
+
+            }
+            else if (e.target == img4) {
+                $("#img4").attr("src", "img/4.webp");
+
+            }
+
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1>GALERIA de imágenes</h1>
+    <table width="100%" border="0">
+        <tr>
+            <td><img src="img/1.webp" id="img1"> </td>
+            <td><img src="img/2.webp" id="img2"> </td>
+            <td><img src="img/3.webp" id="img3"> </td>
+            <td><img src="img/4.webp" id="img4"> </td>
+
+        </tr>
+    </table>
+</body>
+
+</html>
