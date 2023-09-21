@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* #primerParrafo {
+            background-color: #f00
+
+        } */
+
+
+        h1 {
+            text-align: center;
+        }
+
+        div {
+            width: 16%;
+            margin: 0 100px;
+            float: left;
+            border: solid #f00 2px;
+            padding: 10px;
+
+        }
+
+        table {
+            width: 100%;
+            margin-top: 10px;
+
+
+        }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            let botones = document.querySelectorAll("input");
+            for (let i = 0; i < botones.length; i++) {
+                botones[i].addEventListener("click", modolectura, false);
+
+            }
+        });
+        function modolectura(e) {
+            let zonaActuacion;
+            if (e.target == lectura1) {
+                zonaActuacion = "#noticias1";
+            }
+            else if (e.target == lectura2) {
+                zonaActuacion = "#noticias2";
+
+            }
+            else if (e.target == lectura3) {
+                zonaActuacion = "#noticias3";
+
+            }
+
+            $(zonaActuacion).css({ "background-color": "black", "font-size": "20px", "text-align": "justify", "color": "white" });
+        }
+
+
+
+    </script>
+
+
+</head>
+
+<body>
+    <h1>NOTICIAS</h1>
+    <div id="noticias1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque alias repellat porro laborum
+        soluta praesentium id magni voluptatibus quisquam ut, deleniti necessitatibus impedit nobis expedita vel
+        assumenda quo officiis obcaecati?Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptatum
+        impedit cum. Suscipit ullam doloremque quod minus voluptates error dignissimos quasi. Repellendus dolore
+        inventore mollitia molestias modi incidunt fugit similique?
+
+        <table>
+            <tr>
+                <td style="text-align: left;"> <input type="button" value="Modo_lectura" id="lectura1"></td>
+
+            </tr>
+        </table>
+    </div>
+
+    <div id="noticias2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque alias repellat porro laborum
+        soluta praesentium id magni voluptatibus quisquam ut, deleniti necessitatibus impedit nobis expedita vel
+        assumenda quo officiis obcaecati?Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptatum
+        impedit cum. Suscipit ullam doloremque quod minus voluptates error dignissimos quasi. Repellendus dolore
+        inventore mollitia molestias modi incidunt fugit similique?
+
+        <table>
+            <tr>
+                <td style="text-align: left;"> <input type="button" value="Modo_lectura" id="lectura2"></td>
+
+            </tr>
+        </table>
+    </div>
+
+    <div id="noticias3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque alias repellat porro laborum
+        soluta praesentium id magni voluptatibus quisquam ut, deleniti necessitatibus impedit nobis expedita vel
+        assumenda quo officiis obcaecati?Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptatum
+        impedit cum. Suscipit ullam doloremque quod minus voluptates error dignissimos quasi. Repellendus dolore
+        inventore mollitia molestias modi incidunt fugit similique?
+
+        <table>
+            <tr>
+                <td style="text-align: left;"> <input type="button" value="Modo_lectura" id="lectura3"></td>
+
+            </tr>
+        </table>
+    </div>
+
+</body>
+
+</html>
