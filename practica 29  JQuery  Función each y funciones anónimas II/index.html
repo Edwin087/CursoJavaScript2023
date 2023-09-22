@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        p {
+            font-size: 22px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-align: justify;
+        }
+
+        #links {
+            width: 20%;
+            margin-left: 45px;
+            border: dashed #0000ff 2px;
+            float: left;
+            padding-bottom: 200px;
+            padding-left: 20px;
+
+        }
+
+        #links h2 {
+            text-align: center;
+        }
+
+        #ultimos {
+            width: 75%;
+            float: left;
+        }
+
+        li {
+            font-weight: bold;
+            font-size: 18px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("a[href^='https://']").each(function () {
+                let linkExterno = $(this).attr("href")
+                //.append() esta función hace de agregar
+                $("#links").append("<li>" + linkExterno + "<li>");
+            })
+
+        });
+    </script>
+</head>
+
+<body>
+    <h1>Utilizando la función each</h1>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique a sapiente perspiciatis nihil, magnam quae
+        eligendi amet rem nesciunt doloremque accusamus tempora laudantium, <a href="https://scholar.google.es/">google
+            academico</a>
+        tenetur aperiam quaerat doloribus labore
+        omnis. In?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab deserunt voluptatibus reprehenderit voluptas non
+        animi laudantium quibusdam aperiam commodi odit sunt corrupti, minus ducimus? Praesentium dignissimos ea hic
+        iusto suscipit?</p>
+
+    <div id="ultimos">
+        <p>Lorem ipsum dolor <a href="https://www.google.com.ec/">Ir a google</a> sit amet consectetur adipisicing elit.
+            Saepe
+            dolores esse officia eos nisi doloribus similique odio delectus nesciunt voluptatem, enim reiciendis
+            laboriosam, quas unde quaerat mollitia ducimus ipsa cupiditate.</p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis dolorum officia magni fuga.
+            Reprehenderit voluptatibus quasi fugiat dolorum nesciunt iste facilis laboriosam beatae officia asperiores
+            quis, recusandae, consequuntur harum similique.</p>
+
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. <a href="https://www.youtube.com/">Ir a youtube</a>
+            Dolorem praesentium temporibus, quis fugit
+            molestiae nam esse fuga enim facilis ea consectetur ipsa. Illum atque suscipit perferendis quae magnam odit
+            nihil?</p>
+    </div>
+    <div id="links">
+        <h2>Links utilizados</h2>
+    </div>
+</body>
+
+</html>
