@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        body {
+            background-color: #334873;
+            color: #fff;
+        }
+
+        #principal {
+            width: 60%;
+            margin: auto;
+        }
+
+        a {
+            color: #fff;
+            font: bold 20px Verdana, Geneva, Tahoma, sans-serif;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("html").dblclick(function () {
+                alert("hola");
+            });
+
+            $("a").mousemove(function () {
+                let mensaje = "<p> estas pasando el ratón por encima del link </p>";
+                $("#principal").append(mensaje);
+            });
+            $("#elboton").click(function () {
+                //val() modifica el valor de un elemento en concreto en este caso el boton 
+                $(this).val("Para de hacer click !")
+
+            });
+            $("#elcampo").focus(function () {
+
+                $(this).val("Ahora vas a escribir")
+
+            });
+
+        });
+
+
+    </script>
+
+
+</head>
+
+
+<body>
+    <div id="principal">
+
+        <h1>Introducción a envetos</h1>
+        <p><a href="#">Un link</a></p>
+        <form action="#" method="get">
+            <fieldset>
+                <legend>Formulario</legend>
+                <p><input type="button" name="button" id="elboton" value="Un boton"></p>
+                <p><input type="text" name="textfield" id="elcampo"></p>
+
+            </fieldset>
+
+
+        </form>
+
+    </div>
+</body>
+
+</html>
