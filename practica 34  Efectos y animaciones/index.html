@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #login {
+            width: 300px;
+            position: absolute;
+            left: 560px;
+            top: 8px;
+            z-index: 100;
+        }
+
+        #abierto {
+            margin: 0;
+            cursor: pointer;
+            background: rgb(255, 255, 255) url(img/1.jpg) no-repeat 8px 7px;
+            color: rgb(58, 80, 123);
+            padding: 5px 0 2px 30px;
+        }
+
+        #login .cerrado {
+            background-image: url(img/2.jpg);
+            background-color: rgb(110, 138, 195);
+        }
+
+        #abierto:hover {
+            color: rgb(0, 0, 0);
+            background-color: rgb(110, 138, 195);
+        }
+
+        #login form {
+            padding: 10px 10px 10px 10px;
+            display: none;
+            background-color: white;
+        }
+
+        #login label {
+            display: inline-block;
+            width: 100px;
+            text-align: right;
+            margin: 0 15px 0 0;
+            color: rgb(58, 80, 123);
+        }
+
+        #login input {
+            font-size: 14px;
+        }
+
+        #login #boton {
+            margin-left: 50px;
+
+        }
+
+        .cabecera {
+            position: absolute;
+            border-top: solid 6px white;
+            padding: 10px 0 10px 0;
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            letter-spacing: -1px;
+            color: rgb(195, 151, 51);
+            text-shadow: 2px 2px 1px rgba(0, 0, 0 .25);
+            font: normal 45px Arial, sans-serif;
+            margin-top: 80px;
+        }
+
+        .contenido {
+            max-width: 760px;
+            margin: 20px 0 0 100px;
+        }
+
+        .principal {
+            position: relative;
+            padding-bottom: 1em;
+            border-bottom: solid 1px rgba(red, green, blue .5);
+            overflow: hidden;
+            min-height: 300px;
+
+        }
+
+        .principal h1 {
+            font-size: 32px;
+            color: white;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0. 75);
+            border-bottom: solid 1px rgba(255, 255, 255. 5);
+            margin-bottom: 0.75rem;
+        }
+
+        p,
+        li,
+        legend,
+        form {
+            font-size: 18px;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 125%;
+            margin-bottom: 10px;
+
+        }
+
+        html,
+        body {
+            line-height: 1;
+            background-color: #006;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#abierto").click(function () {
+
+                //slideToggle(300) para deslizar
+                //$("#login form").slideToggle(300);
+
+                //fadeToggle(300) para que aparesca y desaparesca
+                //$("#login form").fadeToggle(500);
+
+                // toggle(500)mostrar y ocultar aparece desde la esquina superios y se va de la misma manera
+                $("#login form").toggle(500);
+                $(this).toggleClass("cerrado");
+            });
+        });
+
+    </script>
+
+</head>
+
+<body>
+
+    <div class="cabecera">
+        <p class="logo">Aprendiendo a programar</p>
+    </div>
+    <div id="login">
+        <p id="abierto">Login</p>
+        <form>
+            <p>
+                <label for="username">Username:</label>
+                <input type="text" name="username" id="usuario">
+            </p>
+            <p>
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="contraseña">
+            </p>
+            <p>
+                <input type="submit" name="button" id="boton" value="Enviar">
+            </p>
+        </form>
+    </div>
+
+    <div class="contenido">
+        <div class="principal">
+            <h1>Login deslizante</h1>
+            <p>Has click en el boton de login</p>
+
+        </div>
+
+    </div>
+</body>
+
+</html>
