@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        img {
+            margin-left: 150px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#imagen").click(function () {
+                //se puede dar estilos css con un diferencia lugar de margin-left: 150px; se da poniendo en mayuscula marginLeft y entre comillados si son en puntajes 
+                $(this).animate({
+                    marginLeft: "+=150px"
+                }, 1000);
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <img src="img/1 vehiculo.jpg" width="300" height="200" id="imagen">
+    <h5> Has clic sobre la imagen </h5>
+</body>
+
+</html>
