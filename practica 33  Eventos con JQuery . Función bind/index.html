@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            text-align: center;
+            float: right;
+            margin-right: 50px;
+
+        }
+
+        p {
+            font-size: 1.3em;
+        }
+
+        #imagenGrdande {
+            position: absolute;
+            margin-left: auto;
+            margin-right: auto;
+            left: 0;
+            right: 0;
+            width: 700px;
+            height: 405px;
+            z-index: 1;
+            border: dotted 5px #0000ff;
+
+        }
+    </style>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            let vimg1 = $("#imagen1").attr("src");
+            $("#imagenGrdande").hide();
+            //bind() se puede espesificar mas de un envento 
+            $("#imagen1").bind("click", vimg1, abreimagen);
+        })
+
+        function abreimagen(e) {
+            //stopPropagation() es no propages el evento en otro lado del documento
+            e.stopPropagation();
+
+            $("#imagenGrdande").fadeIn(1000);
+            $("#imgSustitucion").replaceWith("<img src='" + e.data + "'  width='700' height ='405'>");
+
+        }
+
+        //bind() se puede espesificar mas de un envento ejemplo
+        $(document).bind("click keypress", function () {
+            $("#imagenGrdande").fadeOut(1000);
+
+        });
+
+
+
+
+    </script>
+</head>
+
+<body>
+    <div id="imagenGrdande"><img src="" id="imgSustitucion"></div>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque recusandae ratione cupiditate ut cum omnis
+        in minima consectetur amet reiciendis officia impedit natus unde, qui ab, obcaecati debitis ullam at! Lorem
+        ipsum dolor sit amet consectetur adipisicing elit. Animi, quos magni? Temporibus perferendis expedita rerum
+        dolor, veritatis quam? Asperiores quisquam ducimus, sint pariatur veritatis error culpa reiciendis! Porro, vero
+        qui.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio nesciunt dicta, odit, molestias tempore omnis ut
+        voluptatibus quisquam rem ad debitis voluptates mollitia ipsum accusamus. Deserunt ut soluta vitae earum? Lorem
+        ipsum dolor sit amet consectetur adipisicing elit. Temporibus dolor nesciunt placeat harum quia recusandae,
+        facere alias voluptates deleniti ipsam sit illum! Neque cumque eos officiis obcaecati, vitae ad tempore.</p>
+    <table border="0">
+        <tr>
+            <td><img src="img/2.webp" width="150" height="100" id="imagen1"></td>
+        </tr>
+    </table>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi rem porro iste illum? Voluptatibus totam
+        exercitationem iure quia rerum, libero impedit recusandae veniam dolorem explicabo repudiandae reiciendis eius
+        ipsum blanditiis!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id unde, eius perferendis eos hic a, explicabo
+        architecto, ad consectetur quod modi harum? Veniam beatae suscipit error ullam dolore quod non. Lorem ipsum
+        dolor sit amet consectetur adipisicing elit. Placeat harum quaerat voluptas ad odit perspiciatis, porro quas
+        adipisci odio dicta, deleniti aliquam deserunt itaque, enim quos sequi! Ab, aliquid repudiandae?</p>
+
+</body>
+
+</html>
