@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #menu {
+            position: absolute;
+            left: -210px;
+            top: 0px;
+            width: 213px;
+            height: 232px;
+            background-color: #ff9;
+            padding: 15px;
+        }
+
+        #boton {
+            position: absolute;
+            left: 216px;
+            top: 0px;
+            width: 21px;
+            height: 25px;
+            z-index: 1;
+            cursor: pointer;
+
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+
+        $(document).ready(function () {
+            $("#boton").click(function () {
+                let oculto = $("#menu").css("left") == "-210px";
+                if (oculto) {
+                    $("#menu").animate({ left: "0px" });
+                } else {
+                    $("#menu").animate({ left: "-210px" })
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <p style="margin-left: 50px;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum error repellendus
+        fugit
+        vero veritatis, magni impedit obcaecati vitae dignissimos cupiditate corporis iusto necessitatibus architecto
+        inventore nulla excepturi soluta similique ipsa?Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Repellendus pariatur consequatur, laboriosam, optio quo, quasi enim consequuntur totam cupiditate dolore sequi
+        esse
+        expedita est distinctio quae ratione porro voluptatem maiores. Lorem ipsum dolor sit amet, consectetur
+        adipisicing
+        elit. Sed voluptates cumque qui. Unde facilis quibusdam quae eveniet ex nobis laudantium mollitia voluptas
+        placeat
+        dolorum non eius illum, porro facere laborum.</p>
+    <p style="margin-left: 50px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque harum optio
+        consequuntur assumenda, incidunt eaque nam, cupiditate nihil repellat fuga beatae inventore laboriosam ut ex
+        placeat
+        ab, fugit hic vel? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui iste veniam doloremque mollitia
+        quidem tenetur dolor aliquam laboriosam sunt accusamus voluptatibus, hic iure optio, voluptas, magnam culpa
+        eligendi
+        minima animi.</p>
+    <p style="margin-left: 50px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque harum optio
+        consequuntur assumenda, incidunt eaque nam, cupiditate nihil repellat fuga beatae inventore laboriosam ut ex
+        placeat
+        ab, fugit hic vel? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui iste veniam doloremque mollitia
+        quidem tenetur dolor aliquam laboriosam sunt accusamus voluptatibus, hic iure optio, voluptas, magnam culpa
+        eligendi
+        minima animi.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos repellendus atque necessitatibus rerum
+        deleniti
+        sapiente soluta numquam repudiandae quaerat architecto! Optio illo voluptas, nihil quas quae corrupti explicabo?
+        Dicta, iusto!</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam debitis fugiat pariatur soluta optio provident
+        rem
+        dolores voluptate ea! Praesentium eligendi quo aliquid odio repellat provident fuga accusamus voluptatem modi!
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur pariatur unde, dolor a quaerat aperiam vero
+        ipsa
+        voluptatum eligendi maiores, magni voluptate! Quae perferendis illum dolores sapiente harum quaerat a.</p>
+    <div id="menu">
+        <div id="boton">X </div>
+        <p>Menú:</p>
+        <p>Opción A</p>
+        <p>Opción B</p>
+        <p>Opción C</p>
+        <p>Opción D</p>
+
+    </div>
+
+</body>
+
+</html>
