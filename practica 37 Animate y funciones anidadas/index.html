@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #titulo {
+            margin-left: 150px;
+        }
+
+        #foto p {
+            background-color: #000;
+            color: #fff;
+            font-size: 24px;
+            text-align: center;
+            font-weight: bold;
+            width: 300px;
+
+        }
+
+        h1 {
+            text-align: center;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#titulo").hide();
+            $("#foto img").width(60).height(40).click(function () {
+                $(this).animate({ marginLeft: "150px", width: "300px", height: "200px" }, 1500, function () {
+                    //funciones encadenadas , delay(es para poner un momento  en pantalla y con fadeOut(se va) )
+                    $("#titulo").fadeIn(1000).delay(1000).fadeOut(1000);
+
+                }).delay(3000);//termina animate
+
+
+                $(this).animate({ marginLeft: "0px", width: "60px", height: "40px" }, 1500);
+
+            })//termina click
+
+
+
+        });//termina ready
+    </script>
+
+</head>
+
+<body>
+    <h1>
+        Prueba imagen
+    </h1>
+    <div id="foto">
+        <img src="img/1.jpg" width="300" height="200" id="imagen1">
+        <p id="titulo">Agua</p>
+    </div>
+</body>
+
+</html>
