@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #menu {
+            width: 70px;
+            background-color: rgb(110, 138, 195);
+            padding: 20px 20px 0 20px;
+            position: absolute;
+            left: -92px;
+            z-index: 100;
+
+        }
+
+        #menu img {
+            margin-bottom: 20px;
+            border: 1px solid rgb(0, 0, 0);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        p {
+            margin-left: 150px;
+        }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script src="cdnjs/jquery.easing.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $("#menu").hover(function () {
+                $(this).stop().animate({ left: "0px" }, 500, "easeInSine");//termina animate 
+            }, function () {
+                //stop() es para que procese una sola ves ya que al pasar el raton por encima del menu se sale varias veses
+                $(this).stop().animate({ left: "-92px" }, 1500, "easeOutBounce");//termina 2 animate
+            });// termina funcion hover
+        });//termina ready
+    </script>
+
+</head>
+
+<body>
+    <div id="menu">
+        <img src="img/1.webp" width="70" height="70" alt="blue">
+        <img src="img/2.webp" width="70" height="70" alt="green">
+        <img src="img/3.webp" width="70" height="70" alt="orange">
+        <img src="img/4.webp" width="70" height="70" alt="purple">
+        <img src="img/5.jpg" width="70" height="70" alt="red">
+        <img src="img/6.jpg" width="70" height="70" alt="yellow">
+
+    </div>
+    <h1>Menús deslizantes</h1>
+    <p>Pasa el raton por encima de la pestaña de la izquierda</p>
+
+</body>
+
+</html>
