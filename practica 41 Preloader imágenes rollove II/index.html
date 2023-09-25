@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        img {
+            text-align: center;
+            width: 200px;
+            height: 200px;
+
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        //PRELOADER 
+        $(document).ready(function () {
+
+            let fotoHover = ["img/1.jpg", "img/2.jpg", "img/3.jpg", "img/4.jpg"];
+            let imagenes = [];
+            for (let i = 0; i < fotoHover.length; i++) {
+                imagenes[i] = new Image();
+                imagenes[i].src = fotoHover[i];
+            }
+
+            $("img").each(function () {
+                $(this).hover(cambiar, restaurar);
+            })
+            function cambiar(e) {
+                if (e.target == img1) {
+                    $("#img1").attr("src", imagenes[0].src)
+                }
+                else if (e.target == img2) {
+                    $("#img2").attr("src", imagenes[1].src)
+                }
+                else if (e.target == img3) {
+                    $("#img3").attr("src", imagenes[2].src)
+                }
+                else if (e.target == img4) {
+                    $("#img4").attr("src", imagenes[3].src)
+                }
+
+
+            }
+            function restaurar(e) {
+                if (e.target == img1) {
+                    $("#img1").attr("src", "imgs/1.jpg")
+                }
+                else if (e.target == img2) {
+                    $("#img2").attr("src", "imgs/2.jpg")
+                }
+                else if (e.target == img3) {
+                    $("#img3").attr("src", "imgs/3.jpg")
+                }
+                else if (e.target == img4) {
+                    $("#img4").attr("src", "imgs/4.jpg")
+                }
+
+            }
+
+        });
+    </script>
+
+</head>
+
+<body>
+    <h1>Galeria de imágenes</h1>
+    <table width="100%" border="0">
+        <tr>
+            <td><img src="imgs/1.jpg" id="img1"></td>
+            <td><img src="imgs/2.jpg" id="img2"></td>
+            <td><img src="imgs/3.jpg" id="img3"></td>
+            <td><img src="imgs/4.jpg" id="img4"></td>
+        </tr>
+
+    </table>
+</body>
+
+</html>
