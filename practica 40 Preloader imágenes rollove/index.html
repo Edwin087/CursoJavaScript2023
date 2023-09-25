@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            //con estas instrucciones  se tiene almacenado la imagren que seria PRELOADER para cuando se ulilize la instrucción hover()
+            let fotoNueva = new Image();
+            fotoNueva.src = ("img/1.jpg");
+            $("#foto").hover(function () {
+
+                $(this).attr("src", fotoNueva.src);
+
+            }, function () {
+                $(this).attr("src", "img/2.jpg");
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <img src="img/2.jpg" width="300" height="200" id="foto">
+</body>
+
+</html>
