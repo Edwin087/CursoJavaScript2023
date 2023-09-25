@@ -20,12 +20,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
     <script>
-        //PRELOADER 
+
         $(document).ready(function () {
 
             let fotoHover = ["img/1.jpg", "img/2.jpg", "img/3.jpg", "img/4.jpg"];
             let imagenes = [];
             for (let i = 0; i < fotoHover.length; i++) {
+                //PRELOADER 
                 imagenes[i] = new Image();
                 imagenes[i].src = fotoHover[i];
             }
