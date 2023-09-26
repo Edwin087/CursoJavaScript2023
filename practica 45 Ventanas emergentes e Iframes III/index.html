@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        //  open("varias instrucciones")abre una ventana emergente cuando el navegador lea la instrucción se puede agregar cuantas desea
+
+        //1 forma
+        /*  open("https://www.youtube.com/", "Yotube", "width=300, height=200 left =300, top=300 scrollbars=no, toolbars=no ");
+  
+          open("https://www.youtube.com/", "Yotube2", "width=300, height=200 left =900, top=500 scrollbars=no, toolbars=no ");*/
+
+
+
+        $(document).ready(function () {
+            //forma 2 para reutilizar las variables
+            let VentanaEmergente = "width=300, height=200 left =300, top=300 scrollbars=no, toolbars=no ";
+
+            let miVentana = open("https://www.youtube.com/", "Yotube1", VentanaEmergente);
+
+            $("#botonCerrar").click(function (e) {
+                e.preventDefault();
+                miVentana.close();
+
+
+            });
+
+        });
+
+
+    </script>
+
+
+</head>
+
+<body>
+    <a href="https://www.youtube.com/">Ir a yotube</a>
+    <br><br><br>
+    <a href="" id="botonCerrar">Cerrar</a>
+
+</body>
+
+</html>
