@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #06c;
+        }
+
+        h1 {
+            text-align: center;
+            color: #fff;
+            font-weight: bold;
+
+        }
+
+        #contenedor {
+            background-color: #06c;
+            margin: auto;
+            width: 500px;
+            height: 400px;
+        }
+
+        a {
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #fff;
+            font-size: 24px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function (e) {
+            $("#pulsa").click(function (e) {
+                e.preventDefault();
+                $("#externo").attr("src", "https://www.pildorasinformaticas.es/");
+            });
+        })
+
+    </script>
+</head>
+
+<body>
+    <h1>Aprendiendo a programar</h1>
+    <a href="" id="pulsa">Pulsa</a>
+    <!--  iframe-->
+    <div id="contenedor"><iframe src="" frameborder="0" width="500" height="400" id="externo"></iframe></div>
+</body>
+
+</html>
