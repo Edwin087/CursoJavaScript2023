@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //clase padre hereda de la clase objet automaticamente que esta contiene varios metodos y otros dentro de prototype
+
+        class Persona {
+            //static constante 
+
+            static get maxObj() {
+                return 5;
+            }
+
+            static contadoerPersona = 0;
+            constructor(nombre, apellido) {
+                this._nombre = nombre;
+                this._apellido = apellido;
+
+                if (Persona.contadoerPersona < Persona.maxObj) {
+                    this.idPersona = ++Persona.contadoerPersona;
+
+                }
+                else {
+                    console.log("Se a superado el maximo de objetos o instancias creadas");
+
+                }
+
+
+            }
+            // get para obtener informacion de una propiedad especifica en este caso nombre
+            get nombre() {
+                return this._nombre;
+            }
+            // set para modificar en valor nombre 
+            set nombre(nom) {
+                this._nombre = nom;
+            }
+
+            get apellido() {
+                return this._apellido;
+            }
+            set apellido(ape) {
+                this._apellido = ape;
+            }
+
+            nombreCompleto() {
+                return this.idPersona + ", " + this._nombre + " " + this._apellido;
+            }
+            //sobreescribiendo el metodo de la clase padre
+            toString() {
+                //Se aplica polimorfismo(multiples formas en tiempo de ejecución ) el metodo que se ejecuta depende si es una referencia de tipo padre o de tipo hijo
+                return this.nombreCompleto();
+            }
+
+
+            //metodos estaticos 
+            static saludar() {
+                console.log("Saludo desde metodo estatico");
+            }
+            //metodos estaticos con un objeto para acceder a un atributo y luego imprimir
+            static saludar2(persona) {
+                console.log(persona._nombre);
+            }
+
+        }
+
+
+
+        //clase hija
+        class Empleado extends Persona {
+            constructor(nombre, apellido, departamento) {
+                super(nombre, apellido);//llamar al constructor de la clase padre
+                this._departamento = departamento;
+            }
+            get departamento() {
+                return this._departamento;
+            }
+            set departamento(dep) {
+                this._departamento = dep;
+            }
+
+            //Sobreescritura que modifica el comportamiento del metodo definido en la clase padre
+            nombreCompleto() {
+                // con super llamamos a metodos definidos en la clase padre
+                return super.nombreCompleto() + "," + this._departamento;
+            }
+
+        }
+
+
+        //instancias u objetos de la clase padre
+        let persona1 = new Persona("Edwin", "Calle");
+        console.log(persona1.toString());
+
+
+
+        //instancias u objetos de la clase hija
+        let empleado2 = new Empleado("Maria", "jimenez", "Sistemas");
+        console.log(empleado2.toString());
+        let empleado3 = new Empleado("Maria", "jimenez", "Sistemas");
+        console.log(empleado3.toString());
+        let empleado4 = new Empleado("Maria", "jimenez", "Sistemas");
+        console.log(empleado4.toString());
+        let empleado5 = new Empleado("Maria", "jimenez", "Sistemas");
+        console.log(empleado5.toString());
+        let empleado6 = new Empleado("Maria", "jimenez", "Sistemas");
+        console.log(empleado6.toString());
+
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
