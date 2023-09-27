@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #ffc;
+        }
+
+        #principal {
+            padding: 10px 10px 10px 50px;
+            background-color: #f93;
+            box-shadow: 10px 10px 5px 0px #999999;
+            border-radius: 10px;
+        }
+
+        td {
+            padding-bottom: 25px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#comprobar").click(comprobar_datos);
+        });
+        function comprobar_datos() {
+            // alert($("#nombre").val());// val() debuelve el valor
+            //forma de acceder a la información de nombre
+            /*  let miNombre = $("#nombre").val();
+              alert("El nombre del usuario es: " + miNombre);*/
+
+
+            //para acceder a todos los datos de tipo texto  $(":text") 
+            $(":text").each(function () {
+                alert($(this).val());
+            });
+
+            //para verifiar el radiobuton donde a marcado Masculino o Femenino-- con checked si es true o fals se verifica si esta activado 
+
+            if ($("#masculino").prop("checked")) {
+                alert("eres hombre");
+            }
+            else {
+                alert("eres mujer");
+            }
+
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <h1>Envio de datos</h1>
+    <div id="contenedor">
+        <form id="form_datos">
+            <table width="20%" border="0" align="center" id="principal">
+                <tr>
+                    <td> Nombre:</td>
+                    <td><label for="nombre"></label> <input type="text" name="nombre" id="nombre"></td>
+                </tr>
+
+                <tr>
+                    <td>Apellodo:</td>
+                    <td> <input type="text" name="apellido" id="apellido"></td>
+                </tr>
+
+                <tr>
+                    <td>Edad:</td>
+                    <td> <input type="text" name="edad" id="edad"></td>
+                </tr>
+
+
+                <tr>
+                    <td>Genero:</td>
+                    <td>
+                        <p>
+                            <label>
+                                <input type="radio" name="genero" id="masculino" value="Masculino"> Masculino
+                            </label> <br>
+                            <label>
+                                <input type="radio" name="genero" id="femenino" value="Femenino"> Femenino
+                            </label> <br>
+                        </p>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td>País</td>
+                    <td><label for="pais"></label>
+                        <select name="pais" id="pais">
+                            <option>España</option>
+                            <option>México</option>
+                            <option>Colombia</option>
+                            <option>Peru</option>
+                            <option>Ecuador</option>
+                            <option>Chile</option>
+                            <option>Argentina</option>
+                        </select>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td>Aficiones</td>
+                    <td>
+                        <table width="200">
+                            <tr>
+                                <td>
+                                    <label>
+                                        <input type="checkbox" name="deportes" id="deportes" value="Deportes">
+                                        Deportes
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                        <input type="checkbox" name="informatica" id="informatica" value="Informatica">
+                                        Informatica
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>
+                                        <input type="checkbox" name="lectura" id="lectura" value="Lectura">
+                                        Lectura
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                        <input type="checkbox" name="cine" id="cine" value="Cine">
+                                        Cine
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>
+                                        <input type="checkbox" name="bares" id="bares" value="Bares">
+                                        Bares
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                        <input type="checkbox" name="naturaleza" id="naturaleza" value="Naturaleza">
+                                        Naturaleza
+                                    </label>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" align="center"> <input type="button" value="Comprobar" id="comprobar"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+
+</html>
