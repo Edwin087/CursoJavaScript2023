@@ -9,9 +9,13 @@
         //clase padre hereda de la clase objet automaticamente que esta contiene varios metodos y otros dentro de prototype
 
         class Persona {
+            static contadoerObjetosPersonas = 0;
+            email = "valor default email";
+
             constructor(nombre, apellido) {
                 this._nombre = nombre;
                 this._apellido = apellido;
+                Persona.contadoerObjetosPersonas++;
 
             }
             // get para obtener informacion de una propiedad especifica en este caso nombre
@@ -38,7 +42,20 @@
                 //Se aplica polimorfismo(multiples formas en tiempo de ejecución ) el metodo que se ejecuta depende si es una referencia de tipo padre o de tipo hijo
                 return this.nombreCompleto();
             }
+
+
+            //metodos estaticos 
+            static saludar() {
+                console.log("Saludo desde metodo estatico");
+            }
+            //metodos estaticos con un objeto para acceder a un atributo y luego imprimir
+            static saludar2(persona) {
+                console.log(persona._nombre);
+            }
+
         }
+
+
 
         //clase hija
         class Empleado extends Persona {
@@ -58,6 +75,7 @@
                 // con super llamamos a metodos definidos en la clase padre
                 return super.nombreCompleto() + "," + this._departamento;
             }
+
         }
 
         //instancias u objetos de la clase padre
@@ -74,6 +92,24 @@
         console.log(empleado1);
         console.log(empleado1.nombreCompleto());
         console.log(empleado1.toString());
+
+        //persona1.saludar();    no es posible llamar un metodo estatic desde un objeto o instancia....pero si dede una clase
+        //llamda desde la clase
+        Persona.saludar();
+        Persona.saludar2(persona1);
+
+
+        // llamdada de atributos o variables estaticas dede la clase y no desde un objeto o instancia
+        //clase padre
+        console.log(Persona.contadoerObjetosPersonas);
+        //clase hija 
+        console.log(Empleado.contadoerObjetosPersonas);
+
+
+        // prueba de llamada de atributo de email 
+        console.log(persona1.email);
+        console.log(empleado1.email);
+
 
 
 
