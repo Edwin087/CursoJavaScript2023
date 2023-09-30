@@ -21,15 +21,27 @@
                 super(nombre, sueldo);
                 this._departamento = departamento;
             }
-            //  paractica sobreescritura
+            //  paractica sobreescritura, con super llama al metodo con sus atributos
             obtenerDetalles() {
                 return `Gerente: ${super.obtenerDetalles()} Departamento: ${this._departamento}`;
             }
         }
 
+        function Imprimir(tipo) {//polimorfismo 
+            console.log(tipo.obtenerDetalles());
+        }
+
+
+
+        let empleado1 = new Empleado("Geovanny", 1368);
+        // console.log(empleado1.obtenerDetalles());
         let gerente1 = new Gerente("Edwin", 1360, "Sistemas");
-        console.log(gerente1);
-        console.log(gerente1.obtenerDetalles());
+        // console.log(gerente1.obtenerDetalles());
+
+        //llamada a la función polimorfismo
+        Imprimir(empleado1);
+        Imprimir(gerente1);
+
 
     </script>
 
