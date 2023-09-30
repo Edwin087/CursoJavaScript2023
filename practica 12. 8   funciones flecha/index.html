@@ -18,13 +18,55 @@
 
 
         //función flecha
-        let miFuncion = () => { console.log("saludos desde mi función flecha"); }
-        //  //función flecha omitiendo los llaves
-        let miFuncion1 = () => console.log("saludos desde mi función flecha");
+        /*let miFuncion = () => { console.log("saludos desde mi función flecha"); }*/
 
 
-        miFuncion();
-        miFuncion1();
+        //  //función flecha omitiendo las llaves si es una sola linea
+        /* let miFuncion1 = () => console.log("saludos desde mi función flecha");*/
+        /*
+         miFuncion();
+         miFuncion1();*/
+
+
+        //función fecha retornando valores
+        /* const saludar = () => {
+             return "saludo desde función fecha";
+         }
+         console.log(saludar());*/
+
+
+        //función fecha retornando valores omitiendo el return y las llaves
+        const saludar = () => "saludo desde función fecha";
+        console.log(saludar());
+
+        //función fecha con objetos ({})
+        const regresaObjeto = () => ({ nombre: "juan", apellido: "calle" });
+        console.log(regresaObjeto())
+
+        //función fecha con parametros
+        /*const funcionConParametros = (mensaje) => console.log(mensaje);
+        funcionConParametros("LO VAS A LOGRAR");*/
+
+
+        //función fecha con parametros si es un solo UN parametro lo podemos omitir los parentisis
+        const funcionConParametros = mensaje => console.log(mensaje);
+        funcionConParametros("LO VAS A LOGRAR");
+
+        //función fecha con varios  parametros en una linea 
+        /*const funcionConVariosParametros = (nu1, nu2) => nu1 + nu2;*/
+
+
+        //función fecha con varios  parametros en varias linea 
+        const funcionConVariosParametros = (nu1, nu2) => {
+
+            let resultado = nu1 + nu2;
+            return `resultado: ${resultado}`;
+        }
+
+
+        console.log(funcionConVariosParametros(5, 5));
+
+
 
     </script>
 </head>
