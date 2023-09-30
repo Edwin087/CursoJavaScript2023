@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        "use strict"
+
+        /*
+                // try catch para capturar errores 
+                try {
+                    let x = 10;
+        
+                    //throw para arrojar nuestro propios errores
+                    throw "Mi error";
+                }
+                catch (error) {
+                    console.log(error)
+                }
+                // finally siempre se va a ejecutar es OBCIONA SI AGREGAR O NO 
+                finally {
+                    console.log("termina la revición de errores")
+                }
+                console.log("continuamos..")*/
+
+
+        let resultado = "";
+        try {
+            //x = 10;
+            if (isNaN(resultado)) {
+                throw "No es un número"
+            } else if (resultado == "") {
+                throw "cadena vacia"
+            }
+        } catch (error) {
+            console.log(error);
+            //console.log(error.name);
+            //  console.log(error.message);
+        }
+        finally {
+            console.log("termina revición de errores")
+        }
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
