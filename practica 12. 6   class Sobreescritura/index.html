@@ -29,6 +29,18 @@
 
         function Imprimir(tipo) {//polimorfismo 
             console.log(tipo.obtenerDetalles());
+            //instanceof primero poner las class de menor jerarquiea a la mayor
+            if (tipo instanceof Gerente) {
+                console.log("es un objeto de tipo gerente");
+                console.log(tipo._departamento);
+            }
+            else if (tipo instanceof Empleado) {
+                console.log("es un objeto de tipo empleado");
+            }
+            else if (tipo instanceof Object) {
+                console.log("es un tipo Objet");
+            }
+
         }
 
 
