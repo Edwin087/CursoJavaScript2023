@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function miFuncion1() {
+            console.log("funcion uno")
+        }
+
+        function miFuncion2() {
+            console.log("funcion dos")
+        }
+
+        miFuncion1();
+        miFuncion2();
+
+
+        ///funcion callback
+        function imprimir(mensaje) {
+            console.log(mensaje);
+        }
+
+        function sumar(op1, op2, funcionCallback) {
+
+            let resultado = op1 + op2;
+            funcionCallback(`Resultado es: ${resultado}`);
+
+        }
+        //pasa la función como un objeto
+        sumar(5, 3, imprimir);
+
+
+
+        //llamandas asincronas con uso de la función setTimeout
+
+        function mifuncionCallback() {
+            console.log("saludo asincrono despues de 3 segundos");
+
+        }
+        //recibe como parametro una función y el segundo argumento el tiempo espesificado en milesegundos
+        setTimeout(mifuncionCallback, 3000);// se ejecuta despues de 3 segundos
+
+        // se puede mandar directamente la función normal o en flecha  como parametro
+        setTimeout(() => {
+            console.log("saludo asincrono 2 despue de 4 segundos");
+        }, 4000);
+
+
+
+        // función setInterval llama varias veses cada sierto tiempo una función 
+
+        let reloj = () => {
+            let flecha = new Date();// va a ser llamada cada cierto cegundo
+            console.log(`${flecha.getHours()}:${flecha.getMinutes()}:${flecha.getSeconds()}`);
+        }
+        //llamada con setInterval
+        setInterval(reloj, 1000)//1 sg
+
+
+
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
