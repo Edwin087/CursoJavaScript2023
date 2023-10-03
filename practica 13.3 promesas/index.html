@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        //promesas , nuevo objet de tipo promise y va tener funciones de tipo callback
+        let miPrormesa = new Promise((resolver, rechazar) => {
+            let exprecion = true;
+            if (exprecion == true) {
+                resolver("Resolvio correcto");
+            } else
+                rechazar("Se produjo un error");
+
+        });
+        //para imprimir si es correcto con parametros 
+        /* miPrormesa.then(
+             valor => console.log(valor), error => console.log(error)
+         );*/
+
+        //para imprimir si es con el catch
+        // miPrormesa.then(valor => console.log(valor)).catch(error => console.log(error));
+
+
+        // llamda de la funcion  setTimeout con promesas
+        let promesaa = new Promise((resolver) => {
+            setTimeout(() => resolver("Saludos con promesa y timeout"), 3000);
+        });
+        // promesaa.then(valor => console.log(valor));
+
+
+        //async indica  que una funcion regresa una promesa,facilita el uso de promesas 
+        async function miFuncionConPromesa() {
+            return "saludos con promesas y async";
+        }
+        // miFuncionConPromesa().then(valor => console.log(valor));
+
+
+        //await espera el resultado de una promesa para omitir .then... await se puede usa dentro de una función declarada con async
+        async function funcionConPromesayAway() {
+            let miPromesa = new Promise(resolver => {
+                resolver("Promesa con AWAIT");
+            });
+            //await omite then
+            console.log(await miPromesa)
+        }
+        //funcionConPromesayAway();
+
+
+        //promesas,async, await y setTimeout
+        async function funcionConPromesayAwaitTimemeout() {
+            let miPromesaa = new Promise(resolver => {
+                setTimeout(() => resolver("promesa con await y setTimeout"), 3000);
+
+            });
+            console.log(await miPromesaa);
+
+        }
+        funcionConPromesayAwaitTimemeout();
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
