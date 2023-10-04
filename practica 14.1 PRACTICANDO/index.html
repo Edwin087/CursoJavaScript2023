@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+
+<body onload="entrar()">
+
+    <h1 onclick="this.innerHTML='Nuevo titulo'"> Manejo de Don con JavaScript</h1>
+    <h2 onclick="cambiarTexto(this)">Manejando el Don con JavaScript</h2>
+    <h3 id="titulo"> Pruebas</h3>
+    <div id="mostrar"></div>
+    <h4 id="titulos">Titulossss</h4>
+    <label for="">Nombre: <input type="text" onchange="combertir(this) "></label> <br> <br> <br>
+    <h5 onmouseover="rojo(this)" onmouseout="azul(this)"> Rojo</h5>
+
+    <button onclick="mostrar()">Mostrar</button>
+
+
+    <h1 id="titulo">manejo de eventos</h1><br>
+    Nombre: <input type="text" name="" id="" onfocus="cambiar(this)" onblur="regresa(this)">
+
+
+    <div>
+        <h2> java</h2>
+        Nombre: <input type="text" name="" id="nombre">
+        Apellido: <input type="text" name="" id="apellido">
+    </div>
+
+    <form id="forma">
+        <h2> java</h2>
+        Nombre2: <input type="text" name="" id="nombre1">
+        Apellido2: <input type="text" name="" id="apellido1">
+    </form>
+
+
+
+
+
+
+</body>
+
+<script>
+    function mostrar() {
+        //alert("hola")
+    }
+
+    function cambiarTexto(titulo) {
+
+        console.log(titulo);
+        console.log(titulo.innerHTML);
+        titulo.innerHTML = "Cambiamos el titulo";
+
+    }
+
+
+    document.getElementById("titulo").onclick = cambiarTex;
+    function cambiarTex() {
+        document.getElementById("mostrar").innerHTML = "Nuevas Pruebas";
+    }
+
+    function entrar() {
+        //  alert("hola");
+        let texto = "";
+
+        if (navigator.cookieEnabled) {
+            texto = "cookies estan habilitadas"
+        }
+        else {
+            texto = "Cookies inabilitadas";
+        }
+        document.getElementById("mostrar").innerHTML = texto;
+    }
+
+    function combertir(nombreImput) {
+        nombreImput.value = nombreImput.value.toUpperCase();
+    }
+
+    function rojo(titulo) {
+        titulo.style.color = "red";
+    }
+    function azul(titulo) {
+        titulo.style.color = "";
+    }
+
+    function cambiar(elementoImput) {
+        elementoImput.style.background = "yellow";
+    }
+    function regresa(elementoImput) {
+        elementoImput.style.background = "";
+    }
+
+
+
+    let nombree = document.getElementById("nombre");
+    document.getElementById("nombre").addEventListener("focus", (evento) => evento.target.style.background = "red", false);
+
+    nombree.addEventListener("blur", (regreso) => regreso.target.style.background = "", false);
+
+
+    /*
+    function cambiar(evento) {
+        let componente = evento.target;
+        componente.style.background = "red";
+    }
+    function regreso(regresoo) {
+        regresoo.target.style.background = "";
+    }*/
+
+
+    let apellido = document.getElementById("apellido");
+    apellido.addEventListener("focus", cambiar, false);
+
+    document.getElementById("apellido").addEventListener("blur", regreso, false);
+    function cambiar(evento) {
+        let componente = evento.target;
+        componente.style.background = "red";
+    }
+    function regreso(regresoo) {
+        regresoo.target.style.background = "";
+    }
+
+
+    const forms = document.getElementById("forma");
+    forms.addEventListener("focus", evento => evento.target.style.background = "green", true);
+    forms.addEventListener("blur", evento => evento.target.style.background = "", true);
+
+
+
+</script>
+
+
+</html>
