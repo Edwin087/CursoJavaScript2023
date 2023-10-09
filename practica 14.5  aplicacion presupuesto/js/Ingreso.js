@@ -4,7 +4,7 @@ class Ingreso extends Dato {
     super(descripcion, valor);
     this._Id = ++Ingreso.contadorIngresos;
   }
-  get id() {
+  get idd() {
     return this._Id;
   }
 }
