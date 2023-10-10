@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="externas.css">
+    <style>
+        #noticias {
+            display: inline-block;
+            margin-right: 30px;
+        }
+
+        #noticias li a {
+            padding: 5px 10px;
+            background-color: white;
+            color: black;
+            text-decoration: none;
+        }
+
+        #noticias li a:hover {
+            background-color: rgb(255, 153, 0);
+            color: white;
+        }
+
+        #contenido_externos #noticia {
+            margin-top: 10px;
+            padding: 20px;
+            border: 1px solid white;
+        }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+
+            $("#noticias a").click(function () {
+                $("#contenido_externos").load()
+            })
+
+        });
+    </script>
+
+
+
+</head>
+
+<body>
+    <div class="cabecera">
+
+        <p class="logo">Aprendiendo a programar. Función load()</p>
+    </div>
+    <div class="contenido">
+        <div class="principal">
+            <h1>Noticias Varias</h1>
+            <ul id="noticias">
+                <li><a href="generales.html">Noticias Generales</a></li>
+                <li><a href="deportivas.html">Noticias Deportivas</a></li>
+                <li><a href="tiempo.html">Noticias de tiempo</a></li>
+            </ul>
+            <div id="contenido_externos"></div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
